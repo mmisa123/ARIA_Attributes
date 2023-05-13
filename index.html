@@ -19,7 +19,12 @@
     </header>
     <main>
       <form action="https://freecodecamp.org/practice-project/accessibility-quiz" method="post">
-        <section role="region" aria-labelledby="student-info"><h2 id="student-info">Students Information</h2></section>
+        <section role="region" aria-labelledby="student-info">
+          <h2 id="student-info">Students Information</h2>
+          <div class="info"><label for="student-name">Name: </label><input id="student-name" type="text" name="student-name" placeholder="Enter your name here" /></div>
+          <div class="info"><label for="student-email">Email address: </label><input id="email" type="email" name="student-email"/></div>
+          <div class="info"><label for="birth-date">D. O. B: </label><input id="birth-date" type="date" name="birth-date"/></div>
+        </section>
         <section role="region" aria-labelledby="html-questions"><h2 id="html-questions">HTML Questions</h2></section>
         <section role="region" aria-labelledby="css-questions"><h2 id="css-questions">CSS QUESTIONS</h2></section>
       </form>
