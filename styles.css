@@ -44,6 +44,8 @@ h1, h2 {
   
   h2 {
     border-bottom: 4px solid #dfdfe2;
+    margin-top: 0;
+    padding-top: 60px;
   }
 
   /* 
@@ -100,6 +102,7 @@ nav li:hover {
 
 main{
     padding-top: 40px;
+    
 }
 
 section{
@@ -110,3 +113,50 @@ section{
     margin-left: auto;
     max-width: 600px;
 }
+
+.info {
+    padding: 10px 0 0 5px;
+  }
+
+  .formrow {
+    margin: 2rem 0;
+    padding:0 2rem;
+  }
+  
+  input {
+    font-size: 19px;
+  }
+
+  .info > input {
+    width: 50%;
+    text-align: left;
+  }
+
+/*
+Targeted all label elements within .info elements, and 
+ their width is set to 10%, and given min-width so they do not 
+ take up less than 55px
+*/
+
+  .info label  {
+    width:10%;
+    min-width: 55px;
+  }
+
+  .info input, .info label {
+    display: inline-block;
+    text-align: right;
+  } 
+
+  /*
+  To neaten the .question-block elements,
+  the following CSS properties was used:
+  */
+
+  .question-block {
+    text-align: left;
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 5px;
+  }  
