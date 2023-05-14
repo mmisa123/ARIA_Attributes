@@ -1,4 +1,40 @@
-/*ARIA */
+/*Project ARIA */
+
+
+/*
+Clicking on the navigation links should jump the 
+viewport to the relevant section. However, this 
+jumping can be disorienting for some users.
+
+Select all elements, and set the scroll-behavior to smooth.
+
+*/
+/*
+*{
+    scroll-behavior: smooth;
+  } */
+  /*
+  Certain types of motion-based animations can cause discomfort for some users. 
+  In particular, people with vestibular disorders have sensitivity to certain motion triggers.
+
+  The @media at-rule has a media feature called prefers-reduced-motion to set CSS based on the user's preferences. 
+  It can take one of the following values:
+  *  reduce
+  *  no-preference
+  Syntax::
+  @media (feature: value) {
+    selector {
+      styles
+    }
+  }
+  Wrap the style rule that sets scroll-behavior: smooth within 
+  an @media at-rule with the media feature 
+  prefers-reduced-motion having no-preference set as the value.
+*/
+  @media (prefers-reduced-motion: no-preference) { * {
+    scroll-behavior: smooth;
+            }
+        }
 
 #logo {
     width: max(100px, 18vw);
@@ -159,4 +195,56 @@ Targeted all label elements within .info elements, and
     width: 100%;
     margin-top: 20px;
     padding-top: 5px;
-  }  
+  } 
+  
+  /*To make the p element have a look of higher priority*/
+  
+  p {
+    margin-top: 5px;
+    padding-left: 15px;
+    font-size: 20px;
+  }
+
+  /*
+  It is useful to see the default border around 
+  the fieldset elements, during development.
+  It might not be the case after development.
+  To remove the border and bottom padding on the .question elements,
+  border is set to none, padding to 0.
+
+  */
+
+  .question {
+    border: none;
+    padding-bottom: 0;
+  }
+
+  .answers-list {
+    list-style: none;
+    padding:0;
+  }
+  button {
+    display: block;
+    margin: 40px auto;
+    width: 40%;
+    padding: 15px;
+    font-size: 23px;
+    background: #d0d0d5;
+    border: 3px solid #3b3b4f;
+  }
+
+  footer{
+    background-color: #2a2a40;
+    display: flexbox;
+    justify-content: center;
+    
+  }
+
+  footer, footer a {
+    color:#fae6fa;
+  }
+
+  address {
+    text-align: center;
+    padding: 4px 3px;
+  }
